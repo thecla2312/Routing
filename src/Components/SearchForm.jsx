@@ -1,17 +1,38 @@
-import React from 'react'
+import React from "react";
+import { useGlobalcontext } from "../hooks/context";
+import { useRef } from "react";
 
 const SearchForm = () => {
+  const {  setSearchValue } = useGlobalcontext();
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
+  const inputContainer = useRef();
+  
+  const searchMeal = () => {
+   setSearchValue(inputContainer.current.value);
+  };
+
   return (
-    <div className="w-lg-50 mx-auto my-2">
-      <form onSubmit={handleSubmit} className='w-50 mx-auto'>
-        <label htmlFor="name" className='form-label' text-success fw-bold fs-4 text-center> Saerch for your favorite Meal</label>
-        <input type="text" className="form-control" id="name" />
+    <div className=" my-2">
+      <form onSubmit={handleSubmit} className="w-50 mx-auto">
+        <label
+          htmlFor="name"
+          className="form-label  text-success fw-bold fs-4 text-center w-100"
+         >
+          {" "}
+          Saerch for your favorite Meal
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="name"
+          ref={inputContainer}
+          onChange={searchMeal}
+        />
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default SearchForm
+export default SearchForm;

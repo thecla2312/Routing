@@ -6,6 +6,7 @@ import Contactpage from './Components/SearchForm';
 import Error from './Pages/Error';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Singlemeal from './Pages/Singlemeal'
 
 
 function App() {
@@ -16,7 +17,8 @@ return (
         <Header/>
       <Routes>
         <Route path= '/' element={<Homepage /> } />
-         <Route path= '/about' element={<Aboutpage />} />
+        <Route path='/about' element={<Aboutpage />} />
+        <Route path="/meal/:mealId" element={<Singlemeal/>} />
         <Route path='*' element={< Error />} />
       </Routes>
       <Footer />

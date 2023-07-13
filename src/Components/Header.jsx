@@ -10,24 +10,24 @@ const Header = () => {
      <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand className='fs-4 fw-bold'>
-        <Link to='/ Homepage' className='text-decoration-none text-success'>The Meal DB</Link>
+        <Link to='/' className='text-decoration-none text-success'>The Meal DB</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link>
-              <Link to='/' className='text-decoration-none text-success fs-5 fw-lighter'>
+       
+              <Link to='/' className='text-decoration-none text-success fs-5 fw-lighter mx-3'>
                 Home
               </Link>
-            </Nav.Link>
-            <Nav.Link>
+           
+        
               <Link
                 to='/about'
-                className='text-decoration-none text-success fs-5 fw-lighter'
+                className='text-decoration-none text-success fs-5 fw-lighter mx-3'
               >
                 About
               </Link>
-            </Nav.Link>
+       
          </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,6 @@
+if (data.meals) {
+    const {
+      strMeal: name,
+      strCategory: cat,
+      steArea: area,
+      
